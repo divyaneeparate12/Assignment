@@ -1,0 +1,63 @@
+<form [formGroup]="dealerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name">
+    <div *ngIf="dealerForm.get('name')?.invalid && dealerForm.get('name')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('name')?.errors?.['required']">Name is required</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="company_name">Company Name:</label>
+    <input id="company_name" formControlName="company_name" />
+    <div *ngIf="dealerForm.get('company_name')?.invalid && dealerForm.get('company_name')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('company_name')?.errors?.['required']">Company Name is required</div>
+    </div>
+  </div>
+  <div>
+    <label for="mobile_no">Mobile No:</label>
+    <input id="mobile_no" formControlName="mobile_no" />
+    <div *ngIf="dealerForm.get('mobile_no')?.invalid && dealerForm.get('mobile_no')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('mobile_no')?.errors?.['required']">Mobile No. is required</div>
+      <div *ngIf="dealerForm.get('mobile_no')?.errors?.['pattern']">Mobile No. should be in 10 digit</div>
+    </div>
+  </div>
+  <div>
+    <label for="whatsapp_no">Whatsapp No:</label>
+    <input id="whatsapp_no" formControlName="whatsapp_no" />
+    <div *ngIf="dealerForm.get('whatsapp_no')?.invalid && dealerForm.get('whatsapp_no')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('whatsapp_no')?.errors?.['required']">Whatsapp No. is required</div>
+      <div *ngIf="dealerForm.get('whatsapp_no')?.errors?.['pattern']">Whatsapp No. should be in 10 digit</div>
+    </div>
+  </div>
+  <div>
+    <label for="email">Email Id:</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="dealerForm.get('email')?.invalid && dealerForm.get('email')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('email')?.errors?.['required']">Email Id is required</div>
+    </div>
+  </div>
+  <div>
+    <label for="date_of_birth">Date of Birth:</label>
+    <input id="date_of_birth" type="date" formControlName="date_of_birth" />
+    <div *ngIf="dealerForm.get('date_of_birth')?.invalid && dealerForm.get('date_of_birth')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('date_of_birth')?.errors?.['required']">Date of Birth is required</div>
+    </div>
+  </div>
+  <div>
+    <label for="pan_no">Pan No:</label>
+    <input id="pan_no" formControlName="pan_no" />
+    <div *ngIf="dealerForm.get('pan_no')?.invalid && dealerForm.get('pan_no')?.touched" class="error-message">
+      <div *ngIf="dealerForm.get('pan_no')?.errors?.['required']">Pan No is required</div>
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+</div>

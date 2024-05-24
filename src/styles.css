@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%; 
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f2fafc;
+}
+
+form div {
+  display: flex;
+  align-items: center;
+}
+
+form label {
+  min-width: 120px;
+  margin-right: 10px;
+}
+
+form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #343434;
+  border-radius: 4px;
+}
+
+table {
+  width: 90%; 
+  margin: 20px auto; 
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; 
+}
+
+td {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f9e9e9;
+}
+
+nav {
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #c95ff4;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+button i {
+  color: #b76767; 
+  font-size: 18px;
+}
+
+.edit-button {
+  margin-right: 10px; 
+}
+
+button:hover i {
+  color: #0056b3;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}

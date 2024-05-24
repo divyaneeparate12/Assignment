@@ -1,0 +1,44 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Company Name</th>
+      <th>Mobile No</th>
+      <th>Whatsapp No</th>
+      <th>Email Id</th>
+      <th>Date of Birth</th>
+      <th>Pan No</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dealer of dealers">
+      <td>{{ dealer.id }}</td>
+      <td>{{ dealer.name }}</td>
+      <td>{{ dealer.company_name }}</td>
+      <td>{{ dealer.mobile_no }}</td>
+      <td>{{ dealer.whatsapp_no }}</td>
+      <td>{{ dealer.email }}</td>
+      <td>{{ dealer.date_of_birth }}</td>
+      <td>{{ dealer.pan_no }}</td>
+      <td>
+        <button class="edit-button" (click)="editDealer(dealer)">
+          <i class="fas fa-edit"></i>
+          <!-- Edit icon -->
+        </button>
+        <button (click)="deleteDealer(dealer.id)">
+          <i class="fas fa-trash-alt"></i>
+          <!-- Delete icon -->
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Dealer Form for editing -->
+<app-dealer-form
+  *ngIf="selectedDealer"
+  [dealer]="selectedDealer"
+  (formSubmit)="onFormSubmit()"
+></app-dealer-form>
