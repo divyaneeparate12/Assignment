@@ -21,13 +21,13 @@ export class DealerFormComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.dealerForm = this.fb.group({
-      name: ['', [Validators.required, Validators.maxLength(50)]], 
-      company_name: ['', [Validators.required, Validators.maxLength(50)]],
+      name: ['', [Validators.required,]], 
+      company_name: ['', [Validators.required,]],
       mobile_no: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]], 
       whatsapp_no: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]], 
-      email: ['', [Validators.required, Validators.email]], 
+      email: ['', [Validators.required,]], 
       date_of_birth: ['', Validators.required],
-      pan_no: ['', [Validators.required, Validators.pattern(/^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/)]], 
+      pan_no: ['', [Validators.required,]], 
     });
   }
 
